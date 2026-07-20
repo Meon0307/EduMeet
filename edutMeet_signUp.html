@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sign Up | EduMeet</title>
+
+    <link rel="stylesheet" href="auth.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <div class="auth-page signup-page">
+
+        <!-- Left Design Section -->
+        <section class="auth-banner">
+
+            <a href="index.html" class="auth-logo">
+                EduMeet
+            </a>
+
+            <div class="banner-content">
+
+                <p class="small-heading">
+                    CREATE YOUR ACCOUNT
+                </p>
+
+                <h1>
+                    Start Your Journey with
+                    <span>EduMeet</span>
+                </h1>
+
+                <p>
+                    Register as a student or lecturer to manage academic
+                    consultations in one convenient platform.
+                </p>
+
+                <div class="banner-features">
+
+                    <div>
+                        <i data-lucide="user-round-check"></i>
+                        <span>Create your profile</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="calendar-plus"></i>
+                        <span>Schedule consultations</span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="messages-square"></i>
+                        <span>Improve communication</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="flower-decoration"></div>
+
+        </section>
+
+
+        <!-- Sign-Up Form Section -->
+        <section class="auth-form-section">
+
+            <div class="auth-form-container signup-container">
+
+                <a href="index.html" class="back-link">
+
+                    <i data-lucide="arrow-left"></i>
+
+                    Back to Home
+
+                </a>
+
+
+                <div class="form-heading">
+
+                    <p class="section-label">
+                        PROFILE REGISTRATION
+                    </p>
+
+                    <h2>
+                        Create an Account
+                    </h2>
+
+                    <p>
+                        Select the account type you want to register.
+                    </p>
+
+                </div>
+
+
+                <!-- Role Selection -->
+                <div class="role-tabs">
+
+                    <button
+                        type="button"
+                        class="role-tab active"
+                        data-role="student"
+                    >
+
+                        <i data-lucide="graduation-cap"></i>
+
+                        Student
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="role-tab"
+                        data-role="lecturer"
+                    >
+
+                        <i data-lucide="briefcase-business"></i>
+
+                        Lecturer
+
+                    </button>
+
+                </div>
+
+
+                <form id="signupForm" novalidate>
+
+                    <input
+                        type="hidden"
+                        id="signupRole"
+                        name="role"
+                        value="student"
+                    >
+
+
+                    <!-- Basic User Information -->
+                    <div class="form-section-title">
+
+                        <span>1</span>
+
+                        Basic Information
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="firstName">
+
+                                First Name
+
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i data-lucide="user-round"></i>
+
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    placeholder="First name"
+                                    autocomplete="given-name"
+                                    required
+                                >
+
+                            </div>
+
+                            <small
+                                class="error-message"
+                                id="firstNameError"
+                            ></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="lastName">
+
+                                Last Name
+
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i data-lucide="user-round"></i>
+
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    placeholder="Last name"
+                                    autocomplete="family-name"
+                                    required
+                                >
+
+                            </div>
+
+                            <small
+                                class="error-message"
+                                id="lastNameError"
+                            ></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="signupEmail">
+
+                            UiTM Email
+
+                            <span class="required">*</span>
+
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i data-lucide="mail"></i>
+
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                name="email"
+                                placeholder="example@uitm.edu.my"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                        <small
+                            class="error-message"
+                            id="signupEmailError"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phoneNumber">
+                            Phone Number
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i data-lucide="phone"></i>
+
+                            <input
+                                type="tel"
+                                id="phoneNumber"
+                                name="phoneNumber"
+                                placeholder="Example: 0123456789"
+                                autocomplete="tel"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Student Fields -->
+                    <div id="studentFields">
+
+                        <div class="form-section-title">
+
+                            <span>2</span>
+
+                            Student Information
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="studentNumber">
+
+                                Student Number
+
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i data-lucide="badge"></i>
+
+                                <input
+                                    type="text"
+                                    id="studentNumber"
+                                    name="studentNumber"
+                                    placeholder="Example: 2026123456"
+                                >
+
+                            </div>
+
+                            <small
+                                class="error-message"
+                                id="studentNumberError"
+                            ></small>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="programme">
+
+                                    Programme
+
+                                    <span class="required">*</span>
+
+                                </label>
+
+                                <div class="input-wrapper select-wrapper">
+
+                                    <i data-lucide="book-open"></i>
+
+                                    <select id="programme" name="programme">
+
+                                        <option value="">
+                                            Select programme
+                                        </option>
+
+                                        <option value="CS251">
+                                            CS251 – Multimedia Computing
+                                        </option>
+
+                                        <option value="CS230">
+                                            CS230 – Computer Science
+                                        </option>
+
+                                        <option value="CS240">
+                                            CS240 – Information Technology
+                                        </option>
+
+                                        <option value="CS253">
+                                            CS253 – Computing Mathematics
+                                        </option>
+
+                                        <option value="other">
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <small
+                                    class="error-message"
+                                    id="programmeError"
+                                ></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="semester">
+
+                                    Semester
+
+                                    <span class="required">*</span>
+
+                                </label>
+
+                                <div class="input-wrapper select-wrapper">
+
+                                    <i data-lucide="layers-3"></i>
+
+                                    <select id="semester" name="semester">
+
+                                        <option value="">
+                                            Select semester
+                                        </option>
+
+                                        <option value="1">Semester 1</option>
+                                        <option value="2">Semester 2</option>
+                                        <option value="3">Semester 3</option>
+                                        <option value="4">Semester 4</option>
+                                        <option value="5">Semester 5</option>
+                                        <option value="6">Semester 6</option>
+                                        <option value="7">Semester 7</option>
+                                        <option value="8">Semester 8</option>
+
+                                    </select>
+
+                                </div>
+
+                                <small
+                                    class="error-message"
+                                    id="semesterError"
+                                ></small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Lecturer Fields -->
+                    <div id="lecturerFields" class="hidden">
+
+                        <div class="form-section-title">
+
+                            <span>2</span>
+
+                            Lecturer Information
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="staffNumber">
+
+                                Staff Number
+
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i data-lucide="badge"></i>
+
+                                <input
+                                    type="text"
+                                    id="staffNumber"
+                                    name="staffNumber"
+                                    placeholder="Enter staff number"
+                                >
+
+                            </div>
+
+                            <small
+                                class="error-message"
+                                id="staffNumberError"
+                            ></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="department">
+
+                                Department
+
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <div class="input-wrapper select-wrapper">
+
+                                <i data-lucide="building-2"></i>
+
+                                <select id="department" name="department">
+
+                                    <option value="">
+                                        Select department
+                                    </option>
+
+                                    <option value="FSKM">
+                                        Faculty of Computer Science and Mathematics
+                                    </option>
+
+                                    <option value="other">
+                                        Other Department
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                            <small
+                                class="error-message"
+                                id="departmentError"
+                            ></small>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="officeLocation">
+
+                                    Office Location
+
+                                    <span class="required">*</span>
+
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <i data-lucide="map-pin"></i>
+
+                                    <input
+                                        type="text"
+                                        id="officeLocation"
+                                        name="officeLocation"
+                                        placeholder="Example: Room B-12"
+                                    >
+
+                                </div>
+
+                                <small
+                                    class="error-message"
+                                    id="officeLocationError"
+                                ></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="locationMode">
+
+                                    Consultation Mode
+
+                                    <span class="required">*</span>
+
+                                </label>
+
+                                <div class="input-wrapper select-wrapper">
+
+                                    <i data-lucide="monitor-smartphone"></i>
+
+                                    <select
+                                        id="locationMode"
+                                        name="locationMode"
+                                    >
+
+                                        <option value="">
+                                            Select mode
+                                        </option>
+
+                                        <option value="face-to-face">
+                                            Face-to-Face
+                                        </option>
+
+                                        <option value="online">
+                                            Online
+                                        </option>
+
+                                        <option value="hybrid">
+                                            Both
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <small
+                                    class="error-message"
+                                    id="locationModeError"
+                                ></small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Security -->
+                    <div class="form-section-title">
+
+                        <span>3</span>
+
+                        Account Security
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="signupPassword">
+
+                            Password
+
+                            <span class="required">*</span>
+
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i data-lucide="lock-keyhole"></i>
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                name="password"
+                                placeholder="At least 8 characters"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-password-target="signupPassword"
+                                aria-label="Show password"
+                            >
+
+                                <i data-lucide="eye"></i>
+
+                            </button>
+
+                        </div>
+
+                        <div class="password-requirements">
+
+                            <span id="lengthRequirement">
+                                At least 8 characters
+                            </span>
+
+                            <span id="numberRequirement">
+                                Contains a number
+                            </span>
+
+                            <span id="letterRequirement">
+                                Contains a letter
+                            </span>
+
+                        </div>
+
+                        <small
+                            class="error-message"
+                            id="signupPasswordError"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+
+                            Confirm Password
+
+                            <span class="required">*</span>
+
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i data-lucide="lock-keyhole"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Enter password again"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-password-target="confirmPassword"
+                                aria-label="Show password"
+                            >
+
+                                <i data-lucide="eye"></i>
+
+                            </button>
+
+                        </div>
+
+                        <small
+                            class="error-message"
+                            id="confirmPasswordError"
+                        ></small>
+
+                    </div>
+
+
+                    <label class="checkbox-row terms-checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="agreeTerms"
+                            name="agreeTerms"
+                        >
+
+                        <span>
+                            I agree to the
+
+                            <a href="#">
+                                Terms and Conditions
+                            </a>
+
+                            and
+
+                            <a href="#">
+                                Privacy Policy
+                            </a>.
+                        </span>
+
+                    </label>
+
+                    <small
+                        class="error-message terms-error"
+                        id="agreeTermsError"
+                    ></small>
+
+
+                    <button type="submit" class="submit-button">
+
+                        <span id="signupButtonText">
+                            Create Student Account
+                        </span>
+
+                        <i data-lucide="user-round-plus"></i>
+
+                    </button>
+
+
+                    <div
+                        class="form-status"
+                        id="signupStatus"
+                        aria-live="polite"
+                    ></div>
+
+                </form>
+
+
+                <div class="form-footer">
+
+                    <p>
+                        Already have an account?
+
+                        <a href="login.html">
+                            Log In
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

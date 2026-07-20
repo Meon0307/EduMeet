@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EduMeet consultation booking homepage" />
+  <title>EduMeet | Consultation Booking</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Icons. Remove this line if you prefer to use your own SVG icons. -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">EduMeet</a>
+
+    <button class="menu-toggle" id="menuToggle">
+        <i data-lucide="menu"></i>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+        <a class="active" href="#home">Home</a>
+        <a href="#consultation">My Consultation</a>
+        <a href="#lecturer">About Me</a>
+        <a href="#guidelines">Guidelines</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="auth-actions">
+        <a class="btn btn-dark btn-small" href="eduMeet_login.html">Login</a>
+        <a class="btn btn-light btn-small" href="eduMeet_signup.html">Sign Up</a>
+    </div>
+
+</header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">WELCOME TO</p>
+        <h1>EduMeet</h1>
+        <p class="script-text">Your Journey Our Guidance</p>
+        <p class="hero-description">
+          Book your one-on-one consultation with
+          <strong>Madam Norazah</strong> and get the guidance
+          you need for your academic success.
+        </p>
+
+        <div class="hero-buttons">
+
+    <a href="signup.html" class="primary-button">
+        <i data-lucide="calendar-days"></i>
+        Book Consultation
+    </a>
+
+    <a href="eduMeet_login.html" class="secondary-button">
+        <i data-lucide="user-round"></i>
+        View My Consultation
+    </a>
+
+</div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true"></div>
+    </section>
+
+    <!-- LECTURER PROFILE -->
+    <section class="soft-section" id="lecturer">
+      <article class="profile-card">
+        <div class="profile-visual">
+          <div class="portrait-frame">
+            <img src="assets/lecturer-photo.png" alt="Lecturer portrait" />
+          </div>
+        </div>
+
+        <div class="profile-details">
+          <p class="section-label">MEET YOUR LECTURER</p>
+          <h2>Puan Norazah Umar</h2>
+
+          <span class="role-badge">
+            <i data-lucide="user-round"></i>
+            Senior Lecturer
+          </span>
+
+          <div class="info-line">
+            <i data-lucide="building-2"></i>
+            <div>
+              <strong>Faculty of Computer Science &amp; Mathematics (FSKM)</strong>
+              <span>UiTM Cawangan Pulau Pinang, Kampus Permatang Pauh</span>
+            </div>
+          </div>
+
+          <div class="info-line">
+            <i data-lucide="mail"></i>
+            <a href="mailto:norazah191@uitm.edu.my">norazah191@uitm.edu.my</a>
+          </div>
+
+          <blockquote>
+            <i data-lucide="quote"></i>
+            <p>
+              I’m here to support your academic journey, answer your questions,
+              and help you achieve your projects goals with confidence.
+            </p>
+            <i class="heart" data-lucide="heart"></i>
+          </blockquote>
+        </div>
+      </article>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits-section">
+      <div class="benefits-grid">
+        <article class="benefit">
+          <div class="icon-circle"><i data-lucide="calendar-check"></i></div>
+          <h3>Easy Booking</h3>
+          <p>Book consultation in just a few clicks</p>
+        </article>
+
+        <article class="benefit">
+          <div class="icon-circle"><i data-lucide="users-round"></i></div>
+          <h3>Connect with Lecturers</h3>
+          <p>Find and connect with your lecturer</p>
+        </article>
+
+        <article class="benefit">
+          <div class="icon-circle"><i data-lucide="bell"></i></div>
+          <h3>Smart Reminders</h3>
+          <p>Never miss your consultation again</p>
+        </article>
+
+        <article class="benefit">
+          <div class="icon-circle"><i data-lucide="clipboard-list"></i></div>
+          <h3>Track Progress</h3>
+          <p>Track and manage your consultation history</p>
+        </article>
+
+        <article class="benefit">
+          <div class="icon-circle"><i data-lucide="shield-check"></i></div>
+          <h3>Secure &amp; Private</h3>
+          <p>Your discussion is kept private and confidential</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="expertise-section" id="guidelines">
+      <div class="expertise-layout">
+        <article class="expertise-card">
+          <h2><i data-lucide="graduation-cap"></i> AREA OF EXPERTISE</h2>
+          <ul>
+            <li><span>✓</span> Applied Statistics</li>
+            <li><span>✓</span> Data Analysis</li>
+            <li><span>✓</span> Statistical Modelling</li>
+            <li><span>✓</span> Research Methodology</li>
+          </ul>
+          <div class="chart-decoration" aria-hidden="true">
+            <i data-lucide="chart-no-axes-combined"></i>
+          </div>
+        </article>
+
+        <article class="services-card">
+          <div class="service">
+            <div class="service-icon"><i data-lucide="user-round-search"></i></div>
+            <h3>One-to-One<br />Consultation</h3>
+            <p>Personal consultation focused on you and your project</p>
+          </div>
+
+          <div class="service">
+            <div class="service-icon"><i data-lucide="book-open"></i></div>
+            <h3>Academic<br />Guidance</h3>
+            <p>Get clarity and support for your academic challenges</p>
+          </div>
+
+          <div class="service">
+            <div class="service-icon"><i data-lucide="heart"></i></div>
+            <h3>Supportive<br />Environment</h3>
+            <p>A comfortable space to discuss and grow together</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quote-section">
+      <div class="quote-banner">
+        <i data-lucide="quote"></i>
+        <p>Let’s work together to achieve<br />your academic goals.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2>EduMeet</h2>
+          <strong>Puan Norazah Consultation</strong>
+          <p>One-to-one guidance.<br />Personal support, Your success.</p>
+
+          <div class="contact-icons">
+            <a href="mailto:norazah191@uitm.edu.my" aria-label="Email"><i data-lucide="mail"></i></a>
+            <a href="tel:+6043823385" aria-label="Phone"><i data-lucide="phone"></i></a>
+            <a href="#" aria-label="Location"><i data-lucide="map-pin"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <a href="#home">Home</a>
+          <a href="#consultation">My Consultation</a>
+          <a href="#lecturer">About Me</a>
+          <a href="#guidelines">Guidelines</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+
+        <div class="footer-help">
+          <h3>Need Help?</h3>
+          <p>For any inquiries or assistance, feel free to reach out.</p>
+          <a href="mailto:norazah191@uitm.edu.my">
+            <i data-lucide="mail"></i> norazah191@uitm.edu.my
+          </a>
+          <a href="tel:+6043823385">
+            <i data-lucide="phone"></i> +60 4-3823385
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 EduMeet</span>
+        <div>
+          <a href="#">Terms</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Legal notice</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<div class="account-buttons">
+
+    <a href="login.html" class="login-button">
+        Login
+    </a>
+
+    <a href="signup.html" class="signup-button">
+        Sign Up
+    </a>
+
+</div>
